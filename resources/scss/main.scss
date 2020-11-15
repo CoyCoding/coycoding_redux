@@ -1,0 +1,29 @@
+@import 'reset';
+@import 'hero';
+@import 'nav';
+@import 'about';
+@import 'skills';
+@import 'main-global';
+@import 'projects';
+@import 'global-animations';
+@import 'carousel';
+
+#app{
+  background: linear-gradient(rgba(9, 9, 9, 0.90), rgba(9, 9, 9, 0.90)),url('/images/test-bg.png');
+}
+
+body {
+  text-shadow: black 0 9px 11px;
+  color: white;
+  &.pop-up{
+    overflow: hidden;
+  }
+}
+
+
+#footer {
+  .footer-wrapper {
+    height: 50vh;
+    background: #1f1f1f;
+  }
+}

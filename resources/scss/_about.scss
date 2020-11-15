@@ -1,0 +1,193 @@
+#app {
+  #about {
+    position: relative;
+
+    .bg {}
+
+    .container {
+      .title {
+        .line {
+          background: linear-gradient(45deg, blue, red, blue);
+        }
+
+        h2 {}
+      }
+
+      .min-wrapper {
+        .about-grid {
+          display: -ms-grid;
+          display: grid;
+          -ms-grid-columns: 2fr 50px 1fr;
+          grid-template-columns: 2fr 1fr;
+          -ms-grid-rows: auto 10px auto;
+          grid-template-areas: "text github" "text linkedin";
+          grid-gap: 10px;
+          grid-column-gap: 50px;
+          padding: 120px 0;
+          max-width: 1400px;
+          margin: 0 auto;
+          padding: 20px;
+
+          .text {
+            -ms-grid-row: 1;
+            -ms-grid-row-span: 3;
+            -ms-grid-column: 1;
+            grid-area: text;
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            -webkit-box-orient: vertical;
+            -webkit-box-direction: normal;
+            -ms-flex-direction: column;
+            flex-direction: column;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            padding: 30px;
+            border: #ffff00 solid;
+            text-shadow: black 0 9px 11px;
+            color: white;
+
+            h3 {
+              font-size: 3rem;
+              text-align: center;
+              text-transform: uppercase;
+              letter-spacing: 0.5rem;
+            }
+
+            h4 {
+              font-size: 2rem;
+              text-align: center;
+              text-transform: uppercase;
+              margin: 30px 20px 0 0;
+              letter-spacing: 0.5rem;
+              color: grey;
+            }
+
+            p {
+              text-indent: 30px;
+              line-height: 2.5rem;
+              margin: 50px 10px;
+              font-size: 1.2rem;
+              font-weight: 100;
+
+              b {
+                font-weight: 600;
+              }
+            }
+          }
+
+          .link-cube {
+            display: -webkit-box;
+            display: -ms-flexbox;
+            display: flex;
+            max-height: 300px;
+            -webkit-box-pack: center;
+            -ms-flex-pack: center;
+            justify-content: center;
+            -webkit-box-align: center;
+            -ms-flex-align: center;
+            align-items: center;
+            border: #8b0000 solid;
+            position: relative;
+            width: 100%;
+            overflow: hidden;
+
+            &.github {
+              -ms-grid-row: 1;
+              -ms-grid-column: 3;
+              grid-area: github;
+            }
+
+            &.linkedin {
+              -ms-grid-row: 3;
+              -ms-grid-column: 3;
+              grid-area: linkedin;
+            }
+
+            a {
+              position: absolute;
+              display: -webkit-box;
+              display: -ms-flexbox;
+              display: flex;
+              -webkit-box-pack: center;
+              -ms-flex-pack: center;
+              justify-content: center;
+              -webkit-box-align: center;
+              -ms-flex-align: center;
+              align-items: center;
+              height: 100%;
+              width: 100%;
+
+              img {
+                z-index: 1;
+                -webkit-filter: drop-shadow(0px 0px 0px black) drop-shadow(0px 0px 5px black);
+                filter: drop-shadow(0px 0px 0px black) drop-shadow(0px 0px 5px black);
+                -webkit-transition: all 0.5s ease-in;
+                -o-transition: all 0.5s ease-in;
+                transition: all 0.5s ease-in;
+
+                &:hover {
+                  -webkit-transform: scale(1.1);
+                  -ms-transform: scale(1.1);
+                  transform: scale(1.1);
+                  -webkit-filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
+                  filter: drop-shadow(0px 0px 5px black) drop-shadow(0px 0px 10px black);
+                }
+              }
+            }
+
+            img {
+              width: 100%;
+              height: 100%;
+
+              &.reverse {
+                -webkit-transform: rotate(180deg);
+                -ms-transform: rotate(180deg);
+                transform: rotate(180deg);
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .about-grid {
+    -ms-grid-columns: 1fr !important;
+    grid-template-columns: 1fr !important;
+    grid-template-areas: "text" "github" "linkedin" !important;
+
+    .link-cube {
+      -ms-grid-column: 1 !important;
+
+      &.linkedin {
+        -ms-grid-row: 4 !important;
+        -ms-grid-column: 1 !important;
+      }
+
+      &.github {
+        -ms-grid-row: 5 !important;
+      }
+    }
+  }
+}
+@media only screen and (max-width: 767px) {
+  .text {
+    padding: 30px 10px !important;
+
+    h3 {
+      font-size: 2rem !important;
+    }
+
+    h4 {
+      font-size: 1.5rem !important;
+      margin-right: 0 !important;
+    }
+
+    p {
+      text-align: center;
+    }
+  }
+}
