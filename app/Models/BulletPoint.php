@@ -9,8 +9,12 @@ class BulletPoint extends Model
 {
     use HasFactory;
 
+    public $timestamps = false;
+
+    protected $guarded = ['id'];
+
     public function projects()
     {
-      return $this->belongsToMany('App\Models\Project');
+        return $this->belongsToMany('App\Models\Project', 'bullet_point_project');
     }
 }

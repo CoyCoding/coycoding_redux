@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateBulletPointsTable extends Migration
+class CreateBulletPointProjectTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,9 +13,11 @@ class CreateBulletPointsTable extends Migration
      */
     public function up()
     {
-        Schema::create('bullet_points', function (Blueprint $table) {
+        Schema::create('bullet_point_project', function (Blueprint $table) {
             $table->id();
-            $table->string('text')->unique();
+            $table->integer('bullet_point_id');
+            $table->integer('project_id');
+            $table->timestamps();
         });
     }
 
@@ -26,6 +28,6 @@ class CreateBulletPointsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('bullet_points');
+        Schema::dropIfExists('bullet_point_project');
     }
 }

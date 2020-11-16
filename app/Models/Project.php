@@ -9,10 +9,10 @@ class Project extends Model
 {
     use HasFactory;
 
-    protected $hidden = [];
+    protected $guarded = ['id'];
 
     public function bulletpoints()
     {
-      return $this->belongsToMany('App\Models\BulletPoint');
+      return $this->belongsToMany('App\Models\BulletPoint', 'bullet_point_project');
     }
 }

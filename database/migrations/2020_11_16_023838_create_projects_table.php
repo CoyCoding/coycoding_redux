@@ -17,10 +17,10 @@ class CreateProjectsTable extends Migration
             $table->id();
             $table->string('name');
             $table->string('img_url');
-            $table->string('description');
+            $table->text('description');
             $table->string('github_link');
             $table->string('site_link');
-            $table=>string('authors_notes')->nullable();
+            $table->text('authors_notes')->nullable();
             $table->timestamps();
         });
     }
