@@ -1,6 +1,6 @@
 import { Logo } from './animations/logo';
 import SkillBtn from './SkillSection/SkillBtn';
-import ProjectSection, { addProject } from './ProjectsSection/ProjectsSection';
+//import ProjectSection, { addProject } from './ProjectsSection/ProjectsSection';
 // const ScrollTrigger = require('scrolltrigger-classes');
 
 // document.addEventListener('DOMContentLoaded', function() {
@@ -8,9 +8,9 @@ import ProjectSection, { addProject } from './ProjectsSection/ProjectsSection';
 // });
 
 $(document).ready(function() {
-	const projectSection = new ProjectSection();
+	// const projectSection = new ProjectSection();
 	Logo.initLogoSpin();
-	projectSection.initBtn();
-	projectSection.addProject(3);
+	// projectSection.initBtn();
+	// projectSection.addProject(3);
 	console.log('worked');
 });
