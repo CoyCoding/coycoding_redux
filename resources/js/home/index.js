@@ -12,5 +12,5 @@ $(document).ready(function() {
 	Logo.initLogoSpin();
 	// projectSection.initBtn();
 	// projectSection.addProject(3);
-	console.log('worked');
+	//console.log(projectList);
 });

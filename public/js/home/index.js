@@ -205,8 +205,7 @@ $(document).ready(function () {
   // const projectSection = new ProjectSection();
   _animations_logo__WEBPACK_IMPORTED_MODULE_0__["Logo"].initLogoSpin(); // projectSection.initBtn();
   // projectSection.addProject(3);
-
-  console.log('worked');
+  //console.log(projectList);
 });
 
 /***/ }),

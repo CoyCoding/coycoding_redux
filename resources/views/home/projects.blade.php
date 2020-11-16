@@ -1,3 +1,7 @@
+@push('scripts')
+<script>projectList = @json($projects); console.log('working')</script>
+@endpush
+
 <section id="projects">
   <div class="container">
     <div class="title">

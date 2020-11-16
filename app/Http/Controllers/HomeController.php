@@ -9,6 +9,6 @@ class HomeController extends Controller
 {
     public function index(){
       $projects = Project::with('bulletpoints')->get();
-      return view('homelayout')->with('projects', $projects);
+      return view('home/home')->with('projects', $projects);
     }
 }
