@@ -31,12 +31,42 @@ class BulletpointSeedTest extends Migration
         ]);
 
         BulletPoint::create([
-          'text' => 'SQL'
+          'text' => 'MySQL'
         ]);
 
         BulletPoint::create([
-          'text' => 'jQuery'
+          'text' => 'HTML'
         ]);
+
+        BulletPoint::create([
+          'text' => 'Webpack'
+        ]);
+
+        BulletPoint::create([
+          'text' => 'C#'
+        ]);
+
+        BulletPoint::create([
+          'text' => 'CSV Parser'
+        ]);
+
+        BulletPoint::create([
+          'text' => 'Node.js'
+        ]);
+
+        BulletPoint::create([
+          'text' => 'Material UI'
+        ]);
+
+        BulletPoint::create([
+          'text' => 'Google Places API'
+        ]);
+
+        BulletPoint::create([
+          'text' => 'JWT'
+        ]);
+
+
     }
 
     /**
