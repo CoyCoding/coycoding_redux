@@ -1,10 +1,12 @@
 @extends('layouts.home')
 
 @push('scripts')
+  <link href='/css/main.css' rel='stylesheet' type='text/css'>
+@endpush
 
 @section('title', 'Coy Coding')
 
-<link href='/css/main.css' rel='stylesheet' type='text/css'>
+
 
 @section('content')
   @include('home/hero')

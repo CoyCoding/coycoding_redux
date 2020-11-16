@@ -7,7 +7,7 @@
 @import 'projects';
 @import 'global-animations';
 
-#app{
+html #app{
   background: linear-gradient(rgba(9, 9, 9, 0.90), rgba(9, 9, 9, 0.90)),url('/images/test-bg.png');
 }
 
@@ -19,6 +19,9 @@ body {
   }
 }
 
+.wf-loading {
+     opacity: 0 ;
+}
 
 #footer {
   .footer-wrapper {
