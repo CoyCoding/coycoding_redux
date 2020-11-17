@@ -1,0 +1,21 @@
+@import 'reset';
+@import 'nav';
+@import 'main-global';
+
+html #app{
+  min-height: 100vh;
+  background: linear-gradient(rgba(9, 9, 9, 0.90), rgba(9, 9, 9, 0.90)),url('/images/test-bg.png');
+  display: flex;
+  flex-direction: column;
+  .container{
+    margin: 0 auto;
+    display: flex;
+    flex-grow: 1;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    .title{
+      width: 100%;
+    }
+  }
+}

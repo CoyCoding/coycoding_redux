@@ -1,7 +1,7 @@
 <section class="nav">
   <div class="nav-wrapper container">
     <div class="logo">
-      <a href="#hero">
+      <a href="/">
         <img src="/images/logo.png" />
       </a>
       <p>Matt Coy</p>
