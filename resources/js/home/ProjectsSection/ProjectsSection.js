@@ -13,7 +13,7 @@ export default class ProjectSection {
 	addProject(projectsToAdd = 1) {
 		for (var i = 0; i < projectsToAdd; i++) {
 			if (this.currIndex++ < this.projects.length) {
-				$('.projects-grid .project.hidden').first().removeClass('hidden');
+				$('.projects-grid .project.hidden').first().removeClass('hidden').addClass('animate-in');
 			}
 		}
 

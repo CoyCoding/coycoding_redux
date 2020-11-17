@@ -2,6 +2,5 @@
     "/js/app.js": "/js/app.js",
     "/css/main.css": "/css/main.css",
     "/css/error.css": "/css/error.css",
-    "/js/home/index.js": "/js/home/index.js",
-    "/js/home/projects.js": "/js/home/projects.js"
+    "/js/home/index.js": "/js/home/index.js"
 }

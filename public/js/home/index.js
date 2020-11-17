@@ -190,7 +190,7 @@ var ProjectSection = /*#__PURE__*/function () {
 
       for (var i = 0; i < projectsToAdd; i++) {
         if (this.currIndex++ < this.projects.length) {
-          $('.projects-grid .project.hidden').first().removeClass('hidden');
+          $('.projects-grid .project.hidden').first().removeClass('hidden').addClass('animate-in');
         }
       } // hide button once projects all loaded.
 

@@ -49,14 +49,14 @@
         .projects-grid {
           max-width: 1400px;
           margin: 0 auto;
-
+          overflow: hidden;
           .project {
             display: flex;
             align-items: flex-start;
             padding: 20px;
             transition: all 1s ease-in-out;
             opacity: 1;
-
+            transform: translateY(0px);
             &:nth-child(even) {
               flex-direction: row-reverse;
 
@@ -69,10 +69,14 @@
               margin-bottom: 100px;
             }
 
-            &.adding {
+            &.hidden {
+              display: none;
               opacity: 0;
+              transform: translateY(-100px);
             }
-
+            &.animate-in{
+              animation: slide-up 1s ease-in forwards;
+            }
             .square {
               width: 100%;
               border: green solid;
@@ -211,5 +215,17 @@
         justify-content: center !important;
       }
     }
+  }
+}
+
+@keyframes slide-up {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+
+  100% {
+    opacity: 1;
+    transform: translateY(0px);
   }
 }
