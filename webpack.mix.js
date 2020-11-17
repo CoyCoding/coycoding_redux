@@ -11,9 +11,10 @@ const mix = require('laravel-mix');
  |
  */
 
-mix.sass('resources/scss/main.scss', 'public/css')
-mix.sass('resources/scss/error.scss', 'public/css')
-//main
-mix.js('resources/js/app.js', 'public/js');
+//paged css
+mix.sass('resources/scss/main.scss', 'public/css');
+mix.sass('resources/scss/error.scss', 'public/css');
 
+//paged js
+mix.js('resources/js/app.js', 'public/js');
 mix.js('resources/js/home/index.js', 'public/js/home');

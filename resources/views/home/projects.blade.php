@@ -1,5 +1,8 @@
 @push('scripts')
-<script>projectList = @json($projects); console.log('working')</script>
+<script>
+  const projects = @json($projects->toArray());
+  const renderedProjectsCount = 3;
+</script>
 @endpush
 
 <section id="projects">
@@ -12,31 +15,34 @@
     <div class="min-wrapper">
       <div class="project-wrapper">
         <div class="projects-grid">
-          @foreach ($projects->reverse() as $project)
-            <div class="project">
+          @for ($i = 0; $i < count($projects); $i++)
+            <div class="project <?php if($i >= 3) echo 'hidden';?>">
               <div class="square">
                 <div class="img-wrapper">
-                  <img src="{{ $project->img_url }}" width="500" height="300"/>
+                  <img src="{{ $projects[$i]->img_url }}" width="500" height="312"/>
                 </div>
               </div>
               <div class="project-info">
                   <div class="project-details">
-                    <h2>{{ $project->name }}</h2>
+                    <h2>{{ $projects[$i]->name }}</h2>
                     <div class="info">
-                      <p> {{ $project->description }} </p>
+                      <p> {{ $projects[$i]->description }} </p>
                       <div class="skills">
-                        @foreach ($project->bulletpoints as $bulletpoint)
+                        @foreach ($projects[$i]->bulletpoints as $bulletpoint)
                           <div class="bullet-point"><i class="fas fa-circle"></i>{{$bulletpoint->text}}</div>
                         @endforeach
                       </div>
+                      @isset($projects[$i]->authors_notes)
+                        <p><b>Authors Notes: </b>{{$projects[$i]->authors_notes}}</p>
+                      @endisset
                     </div>
                     <div class="project-btns">
-                      <a target="_blank" href="{{$project->github_link}}">
+                      <a target="_blank" href="{{$projects[$i]->github_link}}">
                         <div>
                           source code
                         </div>
                       </a>
-                      <a target="_blank" href="{{$project->site_link}}">
+                      <a target="_blank" href="{{$projects[$i]->site_link}}">
                         <div>
                           demo
                         </div>
@@ -44,8 +50,12 @@
                     </div>
                   </div>
               </div>
-            </div>
-          @endforeach
+            </div
+            >
+          @endfor
+        </div>
+        <div class="more-btn">
+          <p>more</p>
         </div>
       </div>
     </div>

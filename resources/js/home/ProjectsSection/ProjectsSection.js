@@ -2,30 +2,24 @@ import DOMProjects from './DOMProjects';
 import { Projects } from '../data/Projects';
 
 export default class ProjectSection {
-	constructor() {
-		this.projects = new DOMProjects(Projects);
-		this.$projectGrid = $('.projects-grid');
-	}
-
-	addProject(num = 1) {
-		for (var i = 0; i < num; i++) {
-			if (this.projects.getRemainingProjectsCount()) {
-				this.$projectGrid.append($.parseHTML(this.projects.getProject()));
-				var $projects = $('.project');
-				if (!this.projects.getRemainingProjectsCount()) {
-					$('.more-btn').addClass('hidden');
-				}
-				setTimeout(() => {
-					$projects.removeClass('adding');
-				}, 0);
-			}
+	constructor(projects, currIndex) {
+		this.projects = projects.reverse();
+		this.currIndex = currIndex;
+		if(currIndex < this.projects.length){
+			$('.more-btn').removeClass('hidden');
 		}
 	}
 
-	initBtn() {
-		const self = this;
-		$('.more-btn p').on('click', () => {
-			self.addProject();
-		});
+	addProject(projectsToAdd = 1) {
+		for (var i = 0; i < projectsToAdd; i++) {
+			if (this.currIndex++ < this.projects.length) {
+				$('.projects-grid .project.hidden').first().removeClass('hidden');
+			}
+		}
+
+		// hide button once projects all loaded.
+		if (this.currIndex >= this.projects.length) {
+			$('.more-btn').addClass('hidden');
+		}
 	}
 }

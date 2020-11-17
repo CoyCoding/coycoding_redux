@@ -26,10 +26,10 @@
       @stack('scripts')
     </head>
 
-    <body>
+    <body >
       <div id="app">
         @yield('content')
       </div>
     </body>
+    <script type="text/javascript" src="/js/home/index.js"></script>
 </html>
-<script type="text/javascript" src="/js/home/index.js"></script>

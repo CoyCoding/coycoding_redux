@@ -2,6 +2,7 @@ export default class DOMProjects {
 	constructor(projectArr) {
 		this.projectArr = projectArr;
 	}
+
 	getProject() {
 		if (this.projectArr.length) {
 			const project = this.projectArr.pop();
