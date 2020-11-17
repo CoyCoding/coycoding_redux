@@ -1,6 +1,3 @@
-import DOMProjects from './DOMProjects';
-import { Projects } from '../data/Projects';
-
 export default class ProjectSection {
 	constructor(projects, currIndex) {
 		this.projects = projects.reverse();

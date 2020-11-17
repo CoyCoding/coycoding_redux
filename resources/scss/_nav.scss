@@ -20,16 +20,27 @@
 
     .logo {
       margin-right: auto;
+      margin-left: 20px;
       height: inherit;
       display: flex;
       align-items: center;
 
       a {
-        max-width: 80px;
-      }
+        display: flex;
+        justify-content: center;
+        position: relative;
+        align-items: center;
+        max-width: 150px;
+        img {
+          height: auto;
+          width: 100%;
 
-      img {
-        height: 100%;
+        }
+        p{
+          position: absolute;
+          right:20px;
+          color: white;
+        }
       }
     }
 

@@ -3,8 +3,8 @@
     <div class="logo">
       <a href="/#">
         <img src="/images/logo.png" width="162" height="175"/>
+        <p>Matt Coy</p>
       </a>
-      <p>Matt Coy</p>
     </div>
     <ul class="menu">
       <li>

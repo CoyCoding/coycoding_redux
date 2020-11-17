@@ -538,17 +538,29 @@ a {
 
 #app .nav .logo {
   margin-right: auto;
+  margin-left: 20px;
   height: inherit;
   display: flex;
   align-items: center;
 }
 
 #app .nav .logo a {
-  max-width: 80px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  max-width: 150px;
 }
 
-#app .nav .logo img {
-  height: 100%;
+#app .nav .logo a img {
+  height: auto;
+  width: 100%;
+}
+
+#app .nav .logo a p {
+  position: absolute;
+  right: 20px;
+  color: white;
 }
 
 #app .nav .menu {
