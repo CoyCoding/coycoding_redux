@@ -12,6 +12,6 @@
   <div class="title">
       <div class="title-bg"></div>
       <div class="line"></div>
-      <h2 data-scroll="once">404</h2>
+      <h2 data-scroll="once">404 - Page Not Found</h2>
   </div>
 @endsection

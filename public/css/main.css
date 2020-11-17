@@ -823,6 +823,7 @@ a {
   color: #eaeaea;
   width: 100%;
   max-width: 300px;
+  display: flex;
 }
 
 #app #skills .container .skills-wrapper .skills .skills-grid .skill .skill-wrapper:after {

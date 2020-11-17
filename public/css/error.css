@@ -346,3 +346,10 @@ html #app .container .title {
   width: 100%;
 }
 
+html #app .container h2 {
+  font-size: 4rem;
+  left: 20px;
+  width: inherit;
+  margin: 0 auto;
+}
+
