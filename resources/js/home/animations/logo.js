@@ -6,7 +6,6 @@ var spinInterval;
 export const Logo = {
 	initLogoSpin: function() {
 		spinInterval = setInterval(spin, 1);
-		console.log(numOfCircles)
 	}
 };
 
@@ -49,7 +48,7 @@ function circle1(index, num = 1, reverse) {
 			.eq(index)
 			.css({
 				transform: 'rotate(' + startingDegArr[index] + 'deg)'
-			});
+			}).addClass('fade-in');
 		if (reverse) {
 			startingDegArr[index] = startingDegArr[index] - num;
 		} else {

@@ -6,11 +6,10 @@ import SkillBtn from './SkillSection/SkillBtn';
 // document.addEventListener('DOMContentLoaded', function() {
 // 	var trigger = new ScrollTrigger();
 // });
-
+document.addEventListener("DOMContentLoaded", function(event) {
+    Logo.initLogoSpin();
+});
 $(document).ready(function() {
-	// const projectSection = new ProjectSection();
-	Logo.initLogoSpin();
-	// projectSection.initBtn();
-	// projectSection.addProject(3);
-	//console.log(projectList);
+	//alert('test')
+
 });

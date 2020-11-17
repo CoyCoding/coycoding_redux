@@ -119,7 +119,6 @@ var spinInterval;
 var Logo = {
   initLogoSpin: function initLogoSpin() {
     spinInterval = setInterval(spin, 1);
-    console.log(numOfCircles);
   }
 };
 
@@ -170,7 +169,7 @@ function circle1(index) {
   } else {
     $('.circle').eq(index).css({
       transform: 'rotate(' + startingDegArr[index] + 'deg)'
-    });
+    }).addClass('fade-in');
 
     if (reverse) {
       startingDegArr[index] = startingDegArr[index] - num;
@@ -201,11 +200,10 @@ __webpack_require__.r(__webpack_exports__);
 // 	var trigger = new ScrollTrigger();
 // });
 
-$(document).ready(function () {
-  // const projectSection = new ProjectSection();
-  _animations_logo__WEBPACK_IMPORTED_MODULE_0__["Logo"].initLogoSpin(); // projectSection.initBtn();
-  // projectSection.addProject(3);
-  //console.log(projectList);
+document.addEventListener("DOMContentLoaded", function (event) {
+  _animations_logo__WEBPACK_IMPORTED_MODULE_0__["Logo"].initLogoSpin();
+});
+$(document).ready(function () {//alert('test')
 });
 
 /***/ }),

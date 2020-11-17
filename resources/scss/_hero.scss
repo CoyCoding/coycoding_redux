@@ -131,8 +131,7 @@
         position: absolute;
         transform-origin: center;
         border-radius: 50%;
-        animation: fadec 3s ease-in forwards;
-
+        opacity: 0;
         &.c1 {
           background: url("/images/circle1.png");
           transform-origin: 53% 50%;
@@ -168,6 +167,9 @@
           transform-origin: 53% 50%;
         }
       }
+      .fade-in{
+        animation: fadec 2s ease-in forwards;
+      }
     }
 
     .title {
@@ -183,7 +185,7 @@
       color: white;
       margin: 0;
       padding: 0;
-      animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
+      animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.5s forwards;
       opacity: 0;
 
       h1 {

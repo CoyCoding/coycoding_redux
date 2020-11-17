@@ -320,8 +320,7 @@ a {
   position: absolute;
   transform-origin: center;
   border-radius: 50%;
-  -webkit-animation: fadec 3s ease-in forwards;
-          animation: fadec 3s ease-in forwards;
+  opacity: 0;
 }
 
 #app #hero .hero .circle-wrapper .circle.c1 {
@@ -359,6 +358,11 @@ a {
   transform-origin: 53% 50%;
 }
 
+#app #hero .hero .circle-wrapper .fade-in {
+  -webkit-animation: fadec 2s ease-in forwards;
+          animation: fadec 2s ease-in forwards;
+}
+
 #app #hero .hero .title {
   z-index: 2;
   position: absolute;
@@ -372,8 +376,8 @@ a {
   color: white;
   margin: 0;
   padding: 0;
-  -webkit-animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
-          animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.1s forwards;
+  -webkit-animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.5s forwards;
+          animation: fade 1.5s cubic-bezier(1, 1.55, 1, 0.71) 2.5s forwards;
   opacity: 0;
 }
 
@@ -763,18 +767,19 @@ a {
   }
 }
 
-#app #skills .container .skill-wrapper {
+#app #skills .container .skills-wrapper {
   overflow: hidden;
+  padding: 40px 0px;
 }
 
-#app #skills .container .skill-wrapper .skills {
+#app #skills .container .skills-wrapper .skills {
   position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid {
+#app #skills .container .skills-wrapper .skills .skills-grid {
   display: flex;
   max-width: 1400px;
   margin: 0 auto;
@@ -784,23 +789,23 @@ a {
   transition: 1s all ease-in-out;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid.skill-slide-1.slide-closed {
+#app #skills .container .skills-wrapper .skills .skills-grid.skill-slide-1.slide-closed {
   transform: translate(-150%, 0);
   opacity: 0;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid.skill-slide-2 {
+#app #skills .container .skills-wrapper .skills .skills-grid.skill-slide-2 {
   position: absolute;
   transform: translate(150%, 0);
   opacity: 0;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid.skill-slide-2.slide-open {
+#app #skills .container .skills-wrapper .skills .skills-grid.skill-slide-2.slide-open {
   transform: translate(0, 0);
   opacity: 1;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill {
   max-width: 351px;
   padding: 20px;
   width: 33.33%;
@@ -809,7 +814,7 @@ a {
   align-items: center;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill .skill-wrapper {
   border-radius: 50%;
   justify-content: center;
   align-items: center;
@@ -820,47 +825,47 @@ a {
   max-width: 300px;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill .skill-wrapper:after {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill .skill-wrapper:after {
   content: "";
   display: block;
   padding-top: 100%;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill p {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill p {
   position: absolute;
   font-size: 2rem;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.html {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.html {
   text-shadow: black 0 9px 11px;
   color: #eaeaea;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.html .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.html .skill-wrapper {
   border: #8a91d8 solid;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.sql .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.sql .skill-wrapper {
   border: #ff4400 solid;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.css .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.css .skill-wrapper {
   border: yellow solid;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.js .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.js .skill-wrapper {
   border: #8b0000 solid;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.git .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.git .skill-wrapper {
   border: #a252ff solid;
 }
 
-#app #skills .container .skill-wrapper .skills .skills-grid .skill.node .skill-wrapper {
+#app #skills .container .skills-wrapper .skills .skills-grid .skill.node .skill-wrapper {
   border: #129400 solid;
 }
 
-#app #skills .container .skill-wrapper .skills .next {
+#app #skills .container .skills-wrapper .skills .next {
   position: absolute;
   height: 100%;
   top: 0;
@@ -872,18 +877,18 @@ a {
   z-index: 2;
 }
 
-#app #skills .container .skill-wrapper .skills .next.slide-open {
+#app #skills .container .skills-wrapper .skills .next.slide-open {
   right: calc(100% - 50px);
   text-shadow: black 0 -9px 11px;
 }
 
-#app #skills .container .skill-wrapper .skills .next.slide-open .fas {
+#app #skills .container .skills-wrapper .skills .next.slide-open .fas {
   -webkit-animation: float-reverse 2s ease-in-out infinite;
           animation: float-reverse 2s ease-in-out infinite;
   transform: rotate(180deg);
 }
 
-#app #skills .container .skill-wrapper .skills .next .fas {
+#app #skills .container .skills-wrapper .skills .next .fas {
   font-size: 2rem;
   color: #b0aeae;
   transition: all 0.5s linear;
@@ -896,7 +901,7 @@ a {
   cursor: pointer;
 }
 
-#app #skills .container .skill-wrapper .skills .next:hover .fas {
+#app #skills .container .skills-wrapper .skills .next:hover .fas {
   color: white;
   text-shadow: white 0 0 10px;
 }

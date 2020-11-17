@@ -10,7 +10,7 @@
       <h2 data-scroll="once">Skills</h2>
 
     </div>
-    <div class="skill-wrapper">
+    <div class="skills-wrapper">
       <div class="skills">
         <div class="skill-slide-1 skills-grid">
           <div class="html skill">
