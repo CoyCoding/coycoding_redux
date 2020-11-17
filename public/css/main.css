@@ -1073,6 +1073,7 @@ body {
 }
 
 #projects .container .min-wrapper .project-wrapper .projects-grid .project .square .img-wrapper img {
+  height: auto;
   width: 100%;
   box-shadow: #282828 0 0 20px, #1f1f1f 0 0 0 20px;
 }
@@ -1195,7 +1196,7 @@ body {
 }
 
 html #app {
-  background: linear-gradient(rgba(9, 9, 9, 0.9), rgba(9, 9, 9, 0.9)), url("/images/test-bg.png");
+  background: linear-gradient(rgba(9, 9, 9, 0.9), rgba(9, 9, 9, 0.9)), url("/images/bg.png");
 }
 
 body {

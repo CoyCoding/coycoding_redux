@@ -16,7 +16,7 @@
             <div class="project">
               <div class="square">
                 <div class="img-wrapper">
-                  <img src="{{ $project->img_url }}"/>
+                  <img src="{{ $project->img_url }}" width="500" height="300"/>
                 </div>
               </div>
               <div class="project-info">

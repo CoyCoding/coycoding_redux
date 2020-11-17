@@ -2,7 +2,7 @@
   <div class="nav-wrapper container">
     <div class="logo">
       <a href="/#">
-        <img src="/images/logo.png" />
+        <img src="/images/logo.png" width="162" height="175"/>
       </a>
       <p>Matt Coy</p>
     </div>
