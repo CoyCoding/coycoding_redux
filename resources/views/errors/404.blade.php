@@ -1,7 +1,7 @@
 @extends('layouts.error')
 
 @push('scripts')
-  <link href='/css/error.css' rel='stylesheet' type='text/css'>
+  <link href='/css/error.min.css' rel='stylesheet' type='text/css'>
 @endpush
 
 @section('title', 'Coy Coding - 404')

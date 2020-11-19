@@ -75,7 +75,7 @@
               transform: translateY(-100px);
             }
             &.animate-in{
-              animation: slide-up 1s ease-in forwards;
+              animation: slide-up .5s linear forwards;
             }
             .square {
               width: 100%;

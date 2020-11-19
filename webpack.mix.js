@@ -18,3 +18,4 @@ mix.sass('resources/scss/error.scss', 'public/css');
 //paged js
 mix.js('resources/js/app.js', 'public/js');
 mix.js('resources/js/home/index.js', 'public/js/home');
+
