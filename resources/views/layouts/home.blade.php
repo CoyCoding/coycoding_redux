@@ -31,5 +31,5 @@
         @yield('content')
       </div>
     </body>
-    <script type="text/javascript" src="/js/home/index.js"></script>
 </html>
+<script type="text/javascript" src="/js/home/index.js"></script>

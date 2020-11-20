@@ -1,1 +1,367 @@
-*{box-sizing:border-box}a,abbr,acronym,address,applet,article,aside,audio,b,big,blockquote,body,canvas,caption,center,cite,code,dd,del,details,dfn,div,dl,dt,em,embed,fieldset,figcaption,figure,footer,form,h1,h2,h3,h4,h5,h6,header,hgroup,html,i,iframe,img,ins,kbd,label,legend,li,mark,menu,nav,object,ol,output,p,pre,q,ruby,s,samp,section,small,span,strike,strong,sub,summary,sup,table,tbody,td,tfoot,th,thead,time,tr,tt,u,ul,var,video{margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline}article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}body{line-height:1;background:#fff}ol,ul{list-style:none}blockquote,q{quotes:none}blockquote:after,blockquote:before,q:after,q:before{content:"";content:none}table{border-collapse:collapse;border-spacing:0}body{font-family:Rubik,sans-serif}h1{font-weight:100;font-size:50px}.lt{border:solid #000}a{cursor:pointer!important}#app .nav{background:#1f1f1f;position:sticky;top:0;overflow:hidden;z-index:100;position:-webkit-sticky;position:-moz-sticky;position:-ms-sticky;position:-o-sticky}#app .nav .nav-wrapper{background:#1f1f1f;margin:0 auto;display:flex;align-items:center;height:80px}#app .nav .logo{margin-right:auto;margin-left:20px;height:inherit;display:flex;align-items:center}#app .nav .logo a{display:flex;justify-content:center;position:relative;align-items:center;max-width:150px}#app .nav .logo a img{height:auto;width:100%}#app .nav .logo a p{position:absolute;right:20px;color:#fff}#app .nav .menu{display:flex;flex-direction:row;letter-spacing:.2rem;height:100%}#app .nav .menu :last-child{margin-right:0}#app .nav .menu li{color:#fff;padding:0 20px;display:flex;align-items:center;cursor:pointer;position:relative}#app .nav .menu li .hover-bg{background:radial-gradient(rgba(0,128,0,0),#000);background-size:3px 3px;position:absolute;height:100%;width:135px;left:0;opacity:0;transition:opacity 1s ease-in-out}#app .nav .menu li a{min-width:95px;text-align:center;z-index:1;transition:all 1s ease-in-out;color:#fff;text-decoration:none;width:100%;height:100%;justify-content:center;align-items:center;display:flex}#app .nav .menu li:hover .hover-bg{opacity:1}#app .nav .menu li:hover a{text-shadow:#fff 0 0 10px}@media only screen and (max-width:767px){.menu{display:none!important}}body{text-shadow:#000 0 9px 11px;color:#fff}.container{margin:0 auto}.container .title{position:relative;align-items:center;display:flex;overflow:hidden}.container .title .title-bg{position:absolute;height:100%;width:100%;background:radial-gradient(rgba(0,128,0,0),#000);background-size:3px 3px;z-index:1}.container .title .line{position:absolute;width:100%;background:red;height:12px;z-index:0;box-shadow:0 0 0 28px #1f1f1f;background:linear-gradient(45deg,#00f,red,#00f)}.container .title h2{font-size:4rem;position:relative;padding:0 20px;text-transform:uppercase;z-index:2;left:20px;width:370px;text-align:center;transition:left 1.2s ease-out;color:#fff}.container .min-wrapper{overflow:hidden;transition:all 1s ease-in;margin:0 20px;padding:50px 0}html #app{min-height:100vh;background:linear-gradient(rgba(9,9,9,.9),rgba(9,9,9,.9)),url(/images/test-bg.png);display:flex;flex-direction:column}html #app .container{margin:0 auto;display:flex;flex-grow:1;width:100%;justify-content:center;align-items:center}html #app .container .title{width:100%}html #app .container h2{font-size:4rem;left:20px;width:inherit;margin:0 auto}
+* {
+  box-sizing: border-box;
+}
+
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  line-height: 1;
+  background: white;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:after,
+blockquote:before,
+q:after,
+q:before {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Rubik", sans-serif;
+}
+
+h1 {
+  font-weight: 100;
+  font-size: 50px;
+}
+
+.lt {
+  border: solid black;
+}
+
+a {
+  cursor: pointer !important;
+}
+
+#app .nav {
+  background: #1f1f1f;
+  position: sticky;
+  top: 0;
+  overflow: hidden;
+  z-index: 100;
+  position: -webkit-sticky;
+  position: -moz-sticky;
+  position: -ms-sticky;
+  position: -o-sticky;
+}
+
+#app .nav .nav-wrapper {
+  background: #1f1f1f;
+  margin: 0 auto;
+  display: flex;
+  align-items: center;
+  height: 80px;
+}
+
+#app .nav .logo {
+  margin-right: auto;
+  margin-left: 20px;
+  height: inherit;
+  display: flex;
+  align-items: center;
+}
+
+#app .nav .logo a {
+  display: flex;
+  justify-content: center;
+  position: relative;
+  align-items: center;
+  max-width: 150px;
+}
+
+#app .nav .logo a img {
+  height: auto;
+  width: 100%;
+}
+
+#app .nav .logo a p {
+  position: absolute;
+  right: 20px;
+  color: white;
+}
+
+#app .nav .menu {
+  display: flex;
+  flex-direction: row;
+  letter-spacing: 0.2rem;
+  height: 100%;
+}
+
+#app .nav .menu :last-child {
+  margin-right: 0;
+}
+
+#app .nav .menu li {
+  color: white;
+  padding: 0 20px;
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  position: relative;
+}
+
+#app .nav .menu li .hover-bg {
+  background: radial-gradient(rgba(0, 128, 0, 0), black);
+  background-size: 3px 3px;
+  position: absolute;
+  height: 100%;
+  width: 135px;
+  left: 0;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}
+
+#app .nav .menu li a {
+  min-width: 95px;
+  text-align: center;
+  z-index: 1;
+  transition: all 1s ease-in-out;
+  color: white;
+  text-decoration: none;
+  width: 100%;
+  height: 100%;
+  justify-content: center;
+  align-items: center;
+  display: flex;
+}
+
+#app .nav .menu li:hover .hover-bg {
+  opacity: 1;
+}
+
+#app .nav .menu li:hover a {
+  text-shadow: white 0 0 10px;
+}
+
+@media only screen and (max-width: 767px) {
+  .menu {
+    display: none !important;
+  }
+}
+
+body {
+  text-shadow: black 0 9px 11px;
+  color: white;
+}
+
+.container {
+  margin: 0 auto;
+}
+
+.container .title {
+  position: relative;
+  align-items: center;
+  display: flex;
+  overflow: hidden;
+}
+
+.container .title .title-bg {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  background: radial-gradient(#00800000, black);
+  background-size: 3px 3px;
+  z-index: 1;
+}
+
+.container .title .line {
+  position: absolute;
+  width: 100%;
+  background: red;
+  height: 12px;
+  z-index: 0;
+  box-shadow: #1f1f1f 0 0 0 28px;
+  background: linear-gradient(45deg, blue, red, blue);
+}
+
+.container .title h2 {
+  font-size: 4rem;
+  position: relative;
+  padding: 0 20px;
+  text-transform: uppercase;
+  z-index: 2;
+  left: 20px;
+  width: 370px;
+  text-align: center;
+  transition: left 1.2s ease-out;
+  color: #ffffff;
+}
+
+.container .min-wrapper {
+  overflow: hidden;
+  transition: all 1s ease-in;
+  margin: 0 20px;
+  padding: 50px 0;
+}
+
+html #app {
+  min-height: 100vh;
+  background: linear-gradient(rgba(9, 9, 9, 0.9), rgba(9, 9, 9, 0.9)), url("/images/test-bg.png");
+  display: flex;
+  flex-direction: column;
+}
+
+html #app .container {
+  margin: 0 auto;
+  display: flex;
+  flex-grow: 1;
+  width: 100%;
+  justify-content: center;
+  align-items: center;
+}
+
+html #app .container .title {
+  width: 100%;
+}
+
+html #app .container h2 {
+  font-size: 4rem;
+  left: 20px;
+  width: inherit;
+  margin: 0 auto;
+}
+
